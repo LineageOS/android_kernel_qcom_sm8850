@@ -275,13 +275,13 @@ def define_typical_le_build(
         configs = {
             "defconfig": {
                 "config_fragment": config,
-                "base_kernel": "//soc-repo:{}_kernel_aarch64_le".format(name),
+                "base_kernel": ":{}_kernel_aarch64_le".format(name),
                 "build_img_opts": build_img_opts,
                 "ddk_config_deps": [common_info],
             } | perf_kwargs,
             "debug-defconfig": {
                 "config_fragment": debug_config,
-                "base_kernel": "//soc-repo:{}_kernel_aarch64_le_debug".format(name),
+                "base_kernel": ":{}_kernel_aarch64_le_debug".format(name),
                 "build_img_opts": debug_build_img_opts,
                 "ddk_config_deps": [common_info],
                 "implicit_config_fragment": config,

@@ -27,7 +27,7 @@ def define_qcom_le_setup(name, config_file):
     # defaults including le_boot_opts
     defaults = {
         "KERNEL_DIR": "common",
-        "SOC_DIR": "soc-repo",
+        "SOC_DIR": native.package_name(),
         "export DTC_INCLUDE": "${ROOT_DIR}/${SOC_DIR}/include",
         "BOOT_IMAGE_HEADER_VERSION": le_boot_opts.boot_image_header_version,
         "LZ4_RAMDISK": le_boot_opts.lz4_ramdisk,
