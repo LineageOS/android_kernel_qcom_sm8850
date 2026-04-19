@@ -201,7 +201,7 @@ hermetic_genrule(
     name = "kconfig.msm.generated",
     srcs = glob(["**/Kconfig*"]),
     outs = ["Kconfig.ext"],
-    cmd = "KCONFIG_EXT_PREFIX=soc-repo/ $(location flatten_kconfig.sh) $(location Kconfig.msm) >$@",
+    cmd = "KCONFIG_EXT_PREFIX={}/ $(location flatten_kconfig.sh) $(location Kconfig.msm) >$@".format(package_name()),
     tools = ["flatten_kconfig.sh"],
 )
 
