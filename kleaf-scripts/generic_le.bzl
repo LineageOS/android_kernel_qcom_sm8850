@@ -1,7 +1,6 @@
 load(":soc_repo_path.bzl", "SOC_REPO_PATH")
 load("@bazel_skylib//rules:write_file.bzl", "write_file")
 load(":kleaf-scripts/msm_kernel_extensions.bzl", "get_dtb_list", "get_dtbo_list", "get_dtstree")
-load("//build/bazel_common_rules/dist:dist.bzl", "copy_to_dist_dir")
 load("//build/kernel/kleaf:constants.bzl", "aarch64_outs")
 load(
     "//build/kernel/kleaf:kernel.bzl",
