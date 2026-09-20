@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7305bdcd_8ceb80dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-20T23:01:56Z",
+      "side": 1,
+      "message": "maybe we should just rename this to vendor/qcom/sm8850-soc-repo",
+      "revId": "000433422744d4a6b4bdd8ceb3a200b114f00f19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
