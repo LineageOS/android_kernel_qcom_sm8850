@@ -16,6 +16,24 @@
       "message": "Seems like these device.bazelrc files don’t do anything with AOSP KP.",
       "revId": "7eb684cb5dffd2ec759daa643ed4de66b6fcdcab",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "713389d5_18533000",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-21T06:32:54Z",
+      "side": 1,
+      "message": "looks like --announce_rc doesn\u0027t print it, dropping (again)",
+      "parentUuid": "0e3dc671_acf33680",
+      "revId": "7eb684cb5dffd2ec759daa643ed4de66b6fcdcab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
