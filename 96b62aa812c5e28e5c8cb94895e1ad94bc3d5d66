@@ -106,6 +106,24 @@
       "parentUuid": "8a6c6818_2c65bef0",
       "revId": "96b62aa812c5e28e5c8cb94895e1ad94bc3d5d66",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "305f9fb5_191d1b73",
+        "filename": "kleaf-scripts/msm_kernel_extensions.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-21T18:42:14Z",
+      "side": 0,
+      "message": "i think we should do that, symlink is pretty hacky anyway.",
+      "parentUuid": "8e8e18ba_9b508011",
+      "revId": "96b62aa812c5e28e5c8cb94895e1ad94bc3d5d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
