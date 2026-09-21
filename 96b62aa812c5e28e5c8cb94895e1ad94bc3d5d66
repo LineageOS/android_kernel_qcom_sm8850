@@ -70,6 +70,24 @@
       "parentUuid": "16fc668e_c0277d5e",
       "revId": "96b62aa812c5e28e5c8cb94895e1ad94bc3d5d66",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a6c6818_2c65bef0",
+        "filename": "kleaf-scripts/msm_kernel_extensions.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-21T18:12:59Z",
+      "side": 0,
+      "message": "it works without it? that\u0027s even better.",
+      "parentUuid": "9d8b739c_1dc3b96d",
+      "revId": "96b62aa812c5e28e5c8cb94895e1ad94bc3d5d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
