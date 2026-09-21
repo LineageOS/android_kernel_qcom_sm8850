@@ -16,6 +16,24 @@
       "message": "maybe we should just rename this to vendor/qcom/sm8850-soc-repo",
       "revId": "000433422744d4a6b4bdd8ceb3a200b114f00f19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6af3710d_10f06123",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-09-21T03:12:33Z",
+      "side": 1,
+      "message": "or name it as vendor/qcom/sm8850?",
+      "parentUuid": "7305bdcd_8ceb80dc",
+      "revId": "000433422744d4a6b4bdd8ceb3a200b114f00f19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
