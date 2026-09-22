@@ -160,6 +160,24 @@
       "parentUuid": "20e61d28_e74f2020",
       "revId": "96b62aa812c5e28e5c8cb94895e1ad94bc3d5d66",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cfa8ad3_68308e36",
+        "filename": "kleaf-scripts/msm_kernel_extensions.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-09-22T05:50:50Z",
+      "side": 0,
+      "message": "\u003e seems dtb not getting compiling anymore ;(\nnvm. Its works.\nI169a6a7d9678c90af3195f5a6356663d6dd8aecb",
+      "parentUuid": "468a7e1c_82798b08",
+      "revId": "96b62aa812c5e28e5c8cb94895e1ad94bc3d5d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
