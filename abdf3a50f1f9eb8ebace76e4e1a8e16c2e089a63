@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d40a993e_3b71245c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-09-25T07:51:22Z",
+      "side": 1,
+      "message": "Tested on infiniti, switching USB audio streams no longer causes an SMMU fault",
+      "revId": "abdf3a50f1f9eb8ebace76e4e1a8e16c2e089a63",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
