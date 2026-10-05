@@ -15,7 +15,7 @@ load(
 load(":kleaf-scripts/abl.bzl", "define_abl_dist")
 load(":kleaf-scripts/avb_boot_img.bzl", "avb_sign_boot_image")
 load(":kleaf-scripts/consolidate.bzl", "define_consolidated_kernel")
-load(":kleaf-scripts/dtbs.bzl", "define_qcom_dtbs")
+load(":kleaf-scripts/dtbs.bzl", "define_qcom_dtbs", "techpack_dtbo_labels", "techpack_dtbo_renames")
 load(":kleaf-scripts/modules_unprotected.bzl", "get_unprotected_vendor_modules_list")
 load(":kleaf-scripts/msm_dtc.bzl", "define_dtc_dist")
 load(":kleaf-scripts/techpack_modules.bzl", "define_techpack_modules")
@@ -349,10 +349,15 @@ def define_single_android_build(
         )
         gki_system_dlkm_images.append(":{}".format(img_name))
 
+    kernel_binaries = [
+        ":{}_dtb_build/Image".format(stem),
+        ":{}_dtb_build/System.map".format(stem),
+        ":{}_dtb_build/vmlinux".format(stem),
+    ] if dtb_target else []
+
     dist_data = [
         "{}_modules".format(base_kernel),
         ":{}_modules_install".format(stem),
-        "{}_dtb_build".format(stem),
         ":{}_images".format(stem),
         ":{}_system_dlkm_modules_load_filtered".format(stem),
         "{}_super_image".format(stem),
@@ -362,7 +367,7 @@ def define_single_android_build(
         "{}_dtb_build_config".format(stem),
         "{}_tar_kernel_headers".format(stem),
         "{}_system_dlkm_blocklist".format(stem),
-    ] + gki_system_dlkm_images + [
+    ] + kernel_binaries + gki_system_dlkm_images + [
         ":{}_{}_dtbo_image".format(stem, dtbo_img["name"])
         for dtbo_img in custom_dtbo_img_list
     ]
@@ -404,6 +409,27 @@ def define_single_android_build(
 
     dist_data.extend(define_techpack_modules(stem, name, variant))
 
+    if dtb_target:
+        dtb_build = "{}_dtb_build".format(stem)
+        dtbs = [":{}/{}".format(dtb_build, dtb) for dtb in dtb_list]
+        dtbos = [":{}/{}".format(dtb_build, dtbo) for dtbo in dtbo_list]
+        techpack_dtbos = techpack_dtbo_labels(stem, dtb_target)
+        techpack_renames = techpack_dtbo_renames(stem, dtb_target)
+
+        pkg_files(
+            name = "{}_dtbs_base".format(stem),
+            srcs = dtbs + dtbos,
+            prefix = "dtbs/base",
+            strip_prefix = strip_prefix.files_only(),
+        )
+
+        pkg_files(
+            name = "{}_dtbs_techpack".format(stem),
+            srcs = techpack_dtbos,
+            prefix = "dtbs/techpack",
+            renames = techpack_renames,
+        )
+
     pkg_files(
         name = "{}_dist_files".format(stem),
         srcs = dist_data,
@@ -414,7 +440,12 @@ def define_single_android_build(
 
     pkg_install(
         name = "{}_dist".format(stem),
-        srcs = [":{}_dist_files".format(stem)],
+        srcs = [
+            ":{}_dist_files".format(stem),
+        ] + ([
+            ":{}_dtbs_base".format(stem),
+            ":{}_dtbs_techpack".format(stem),
+        ] if dtb_target else []),
         destdir = "out/msm-kernel-{}-{}/dist".format(name, variant),
     )
 

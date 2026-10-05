@@ -1,5 +1,5 @@
 load("@bazel_skylib//rules:common_settings.bzl", "bool_flag")
-load("//vendor/qcom/sm8850-devicetrees:qcom/platform_map.bzl", _get_custom_dtbo_img_list = "get_custom_dtbo_img_list", _get_dtb_list = "get_dtb_list", _get_dtbo_list = "get_dtbo_list")
+load("//vendor/qcom/sm8850-devicetrees:qcom/platform_map.bzl", _get_custom_dtbo_img_list = "get_custom_dtbo_img_list", _get_dtb_list = "get_dtb_list", _get_dtbo_list = "get_dtbo_list", _get_techpack_dtbo_list = "get_techpack_dtbo_list")
 
 def define_top_level_rules():
     for skippable in ["abl", "dtc", "abi"]:
@@ -27,17 +27,21 @@ def define_extras(target, kbuild_config, flavor = None, alias = None):
 def get_build_config_fragments(target):
     return []
 
-def get_dtb_list(target):
-    return _get_dtb_list(target)
+def get_dtb_list(target, product = None):
+    return _get_dtb_list(target, product = product)
 
-def get_dtbo_list(target):
-    return _get_dtbo_list(target)
+def get_dtbo_list(target, product = None):
+    return _get_dtbo_list(target, product = product)
 
-def get_custom_dtbo_img_list(target):
-    return _get_custom_dtbo_img_list(target)
+def get_custom_dtbo_img_list(target, product = None):
+    return _get_custom_dtbo_img_list(target, product = product)
 
 def get_dtstree(target):
     return "//vendor/qcom/sm8850-devicetrees:msm_dt"
+
+def get_techpack_dtbo_list(target, product = None):
+    """Techpack overlays merge_dtbs folds into the DTBs/DTBOs, relative to the dtstree."""
+    return ["qcom/" + dtbo for dtbo in _get_techpack_dtbo_list(target, product = product)]
 
 def get_vendor_ramdisk_binaries(target, flavor = None):
     return None
