@@ -46,6 +46,30 @@
       },
       "revId": "c32b68e8b44aebaec6062d9c7f68dd9d94285079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c09d765_2113a29b",
+        "filename": "android/ACK_SHA",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-11-21T10:51:03Z",
+      "side": 1,
+      "message": "yeah, i think it might make sense to start branching 8850 repos, since ack version is in android manifest.",
+      "parentUuid": "53179508_8806cab9",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 25
+      },
+      "revId": "c32b68e8b44aebaec6062d9c7f68dd9d94285079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
