@@ -22,6 +22,30 @@
       },
       "revId": "c32b68e8b44aebaec6062d9c7f68dd9d94285079",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53179508_8806cab9",
+        "filename": "android/ACK_SHA",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-11-21T10:50:24Z",
+      "side": 1,
+      "message": "Makes sense. I\u0027ll keep this for 24.2",
+      "parentUuid": "d41b08d8_78bb86a9",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 25
+      },
+      "revId": "c32b68e8b44aebaec6062d9c7f68dd9d94285079",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
